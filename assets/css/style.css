@@ -1,49 +1,64 @@
 :root {
+  /* CREATIVE THEME: "Deep Sea Bioluminescence"
+    Primary: Deep Indigo/Teal
+    Accent: Electric Mint & Cyan
+  */
+
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    hsl(220, 30%, 20%) 3%, 
+    hsl(220, 30%, 14%) 97%
   );
+
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
+    hsla(220, 30%, 14%, 0.251) 0%, 
+    hsla(220, 30%, 8%, 0) 100%
+  ), hsl(220, 30%, 10%);
+
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(213, 48%, 47%) 0%, 
-    hsla(36, 100%, 69%, 0) 50%
+    hsl(170, 100%, 40%) 0%, 
+    hsla(170, 100%, 50%, 0) 50%
   );
+
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(240, 2%, 13%);
+    hsla(170, 100%, 50%, 0.251) 0%, 
+    hsla(170, 100%, 50%, 0) 59.86%
+  ), hsl(220, 30%, 10%);
+
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
-    hsla(0, 0%, 25%, 0) 50%
+    hsl(220, 20%, 30%) 0%, 
+    hsla(220, 20%, 30%, 0) 50%
   );
+
   --text-gradient-yellow: linear-gradient(
     to right, 
-    hsl(193, 52%, 44%), 
-    hsl(209, 57%, 44%)
+    hsl(170, 100%, 65%), 
+    hsl(190, 100%, 65%)
   );
 
-  /* solid */
+  /* solid colors */
 
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
-  --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(201, 57%, 42%);
-  --vegas-gold: hsl(202, 55%, 42%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(320, 63%, 43%);
+  --jet: hsl(220, 20%, 22%);
+  --onyx: hsl(220, 25%, 17%);
+  --eerie-black-1: hsl(220, 30%, 13%);
+  --eerie-black-2: hsl(220, 30%, 12%);
+  --smoky-black: hsl(222, 40%, 8%); /* Main Body Background */
+  
+  --white-1: hsl(210, 20%, 98%);
+  --white-2: hsl(210, 20%, 92%);
+  
+  /* Primary Accent Color (Replacing Orange-Yellow) */
+  --orange-yellow-crayola: hsl(172, 90%, 55%); /* Electric Mint */
+  --vegas-gold: hsl(172, 80%, 45%);
+  
+  --light-gray: hsl(210, 10%, 80%);
+  --light-gray-70: hsla(210, 10%, 80%, 0.7);
+  
+  --bittersweet-shimmer: hsl(300, 80%, 60%); /* Error/Secondary pop */
 
   /**
    * typography
@@ -69,14 +84,14 @@
   --fw-600: 600;
 
   /**
-   * shadow
+   * shadow (Tinted slightly blue for better blending)
    */
   
-  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
-  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
-  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
-  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+  --shadow-1: -4px 8px 24px hsla(220, 40%, 5%, 0.25);
+  --shadow-2: 0 16px 30px hsla(220, 40%, 5%, 0.25);
+  --shadow-3: 0 16px 40px hsla(220, 40%, 5%, 0.25);
+  --shadow-4: 0 25px 50px hsla(220, 40%, 5%, 0.15);
+  --shadow-5: 0 24px 80px hsla(220, 40%, 5%, 0.25);
 
   /**
    * transition
@@ -86,10 +101,6 @@
   --transition-2: 0.5s ease-in-out;
 
 }
-
-
-
-
 
 /*-----------------------------------*\
   #RESET
@@ -132,10 +143,6 @@ input, textarea {
 html { font-family: var(--ff-poppins); }
 
 body { background: var(--smoky-black); }
-
-
-
-
 
 /*-----------------------------------*\
   #REUSED STYLE
@@ -268,10 +275,6 @@ article.active {
   z-index: -1;
 }
 
-
-
-
-
 /*-----------------------------------*\
   #MAIN
 \*-----------------------------------*/
@@ -281,10 +284,6 @@ main {
   margin-bottom: 75px;
   min-width: 259px;
 }
-
-
-
-
 
 /*-----------------------------------*\
   #SIDEBAR
@@ -418,12 +417,7 @@ main {
   font-size: 30px;
 }
 
-
 .social-item .social-link:hover { color: var(--light-gray); }
-
-
-
-
 
 /*-----------------------------------*\
   #NAVBAR
@@ -434,15 +428,13 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;   
-  background: hsla(240, 1%, 17%, 0.75);
+  background: hsla(220, 25%, 17%, 0.75); /* Modified for new Onyx color */
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
   box-shadow: var(--shadow-2);
   z-index: 5;
 }
-
-
 
 .navbar-list {
   display: flex;
@@ -464,10 +456,6 @@ main {
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
-
-
-
-
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
@@ -482,8 +470,6 @@ main {
 }
 
 .about-text p { margin-bottom: 15px; }
-
-
 
 /**
  * #service 
@@ -533,21 +519,20 @@ main {
 }
 
 .download-btn button {
-  background-color: #4CAF50;
-  color: white;
+  background-color: var(--orange-yellow-crayola); /* Synced with theme */
+  color: var(--smoky-black);
   padding: 12px 20px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: opacity 0.3s ease;
+  font-weight: var(--fw-500);
 }
 
 .download-btn button:hover {
-  background-color: #45a049;
+  opacity: 0.8;
 }
-
-
 
 /**
  * #testimonials 
@@ -599,7 +584,6 @@ main {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
 
 /**
  * #testimonials-modal
@@ -714,7 +698,6 @@ main {
   line-height: 1.6;
 }
 
-
 /**
  * #clients 
  */
@@ -754,14 +737,11 @@ main {
   margin-left: 40%;
 }
 
-
-
 /*-----------------------------------*\
   #RESUME
 \*-----------------------------------*/
 
 .article-title { margin-bottom: 30px; }
-
 
 /**
  * education and experience 
@@ -825,7 +805,6 @@ main {
   line-height: 1.6;
 }
 
-
 /**
  * skills 
  */
@@ -833,7 +812,6 @@ main {
 .skills-title { margin-bottom: 20px; }
 
 .skills-list { padding: 20px; }
-
 
 .skills-item:not(:last-child) { margin-bottom: 15px; }
 
@@ -862,10 +840,6 @@ main {
   height: 100%;
   border-radius: inherit;
 }
-
-
-
-
 
 /*-----------------------------------*\
   #PORTFOLIO
@@ -1022,10 +996,6 @@ main {
   font-weight: var(--fw-300);
 }
 
-
-
-
-
 /*-----------------------------------*\
   #BLOG
 \*-----------------------------------*/
@@ -1109,10 +1079,6 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
-
-
-
-
 
 /*-----------------------------------*\
   #CONTACT
@@ -1217,10 +1183,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
-
-
-
-
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
@@ -1237,8 +1199,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .clients-item { min-width: calc(33.33% - 10px); }
 
-
-
   /**
    * #PORTFOLIO, BLOG 
    */
@@ -1247,10 +1207,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .blog-banner-box { height: auto; }
 
 }
-
-
-
-
 
 /**
  * responsive larger than 580px screen
@@ -1277,8 +1233,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     --fs-8: 12px;
 
   }
-
-
 
   /**
    * #REUSED STYLE
@@ -1307,8 +1261,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     font-size: 18px;
   }
 
-
-
   /**
    * #MAIN
    */
@@ -1317,8 +1269,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-top: 60px;
     margin-bottom: 100px;
   }
-
-
 
   /**
    * #SIDEBAR
@@ -1363,8 +1313,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: calc(100% - 64px);
   }
 
-
-
   /**
    * #NAVBAR
    */
@@ -1374,8 +1322,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .navbar-list { gap: 20px; }
 
   .navbar-link { --fs-8: 14px; }
-
-
 
   /**
    * #ABOUT
@@ -1467,8 +1413,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 35px;
   }
 
-
-
   /* clients */
 
   .clients-list {
@@ -1479,8 +1423,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .clients-item { min-width: calc(33.33% - 35px); }
-
-
 
   /**
    * #RESUME
@@ -1498,8 +1440,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .skills-item:not(:last-child) { margin-bottom: 25px; }
 
-
-
   /**
    * #PORTFOLIO, BLOG
    */
@@ -1509,8 +1449,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .blog-posts-list { gap: 30px; }
 
   .blog-content { padding: 25px; }
-
-
 
   /**
    * #CONTACT
@@ -1539,10 +1477,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
-
-
-
-
 /**
  * responsive larger than 768px screen
  */
@@ -1557,8 +1491,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
-
-
   /**
    * SIDEBAR
    */
@@ -1568,15 +1500,11 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 30px 15px;
   }
 
-
-
   /**
    * NAVBAR
    */
 
   .navbar-link { --fs-8: 15px; }
-
-
 
   /**
    * ABOUT
@@ -1590,8 +1518,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .modal-avatar-box img { width: 80px; }
-
-
 
   /**
    * PORTFOLIO
@@ -1624,8 +1550,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
 
-
-
   /**
    * CONTACT
    */
@@ -1638,10 +1562,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
   
 }
-
-
-
-
 
 /**
  * responsive larger than 1024px screen
@@ -1659,13 +1579,11 @@ textarea.form-input::-webkit-resizer { display: none; }
     * shadow
     */
 
-    --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
-    --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
-    --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
+    --shadow-1: -4px 8px 24px hsla(220, 40%, 5%, 0.125);
+    --shadow-2: 0 16px 30px hsla(220, 40%, 5%, 0.125);
+    --shadow-3: 0 16px 40px hsla(220, 40%, 5%, 0.125);
 
   }
-
-
 
   /**
    * REUSED STYLE
@@ -1675,8 +1593,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 950px;
     box-shadow: var(--shadow-5);
   }
-
-
 
   /**
    * MAIN 
@@ -1689,8 +1605,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: max-content;
     margin: auto;
   }
-
-
 
   /**
    * NAVBAR
@@ -1715,8 +1629,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .navbar-link { font-weight: var(--fw-500); }
 
-
-
   /**
    * ABOUT
    */
@@ -1736,15 +1648,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .clients-item { min-width: calc(25% - 38px); }
 
-
-
   /**
    * PORTFOLIO
    */
 
   .project-list { grid-template-columns: repeat(3, 1fr); }
-
-
 
   /**
    * BLOG
@@ -1753,10 +1661,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .blog-banner-box { height: 230px; }
 
 }
-
-
-
-
 
 /**
  * responsive larger than 1250px screen
@@ -1784,8 +1688,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   body::-webkit-scrollbar-button { height: 60px; }
 
-
-
   /**
    * REUSED STYLE
    */
@@ -1793,8 +1695,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .sidebar, article { width: auto; }
 
   article { min-height: 100%; }
-
-
 
   /**
    * MAIN
@@ -1814,8 +1714,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 75%;
     margin: 0;
   }
-
-
 
   /**
    * SIDEBAR
@@ -1869,11 +1767,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .social-list { justify-content: center; }
 
-
-
   /**
-	 * RESUME
-	 */
+   * RESUME
+   */
 
   .timeline-text { max-width: 700px; }
 
